@@ -24,6 +24,7 @@ class KombuchaControl extends React.Component {
       mainKombuchaList: newMainKombuchaList,
       kombuchaFormVisibleOnPage: false
     });
+    console.log(this.state.mainKombuchaList)
   }
 
   handleDecrementKombuchaQuantity = (quantityKombucha) => {
