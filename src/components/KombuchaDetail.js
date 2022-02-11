@@ -2,12 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function KombuchaDetail(props){
-  const { kombucha } = props;
+  const { kombucha, onClickingReduce } = props;
 
   let reduceQuantity;
   let amountRemaining;
   if (kombucha.quantity >= 0) {
-    amountRemaining = <h5>Pints Remaining: { kombucha.amount }</h5>;
+    amountRemaining = <h5>Pints Remaining: { kombucha.quantity }</h5>;
     reduceQuantity = <button onClick={ () => onClickingReduce() }>Reduce Quantity</button>
   } else {
     amountRemaining = <h5>No Kombucha Remaining</h5>
