@@ -16,6 +16,7 @@ function Kombucha(props){
         <h4>{props.content.price}</h4>
         <h4>{props.content.flavor}</h4>
         <h4>{props.content.quantity}</h4>
+        {message}
       </div>
     </React.Fragment>
   )
