@@ -1,12 +1,7 @@
-1. Create diagram of components
-2. Create r
 
 
 
-
-
-
-
+![Tap Room Components](./img/tap-room.png "Tap Room Components")
 
 
 # Getting Started with Create React App
