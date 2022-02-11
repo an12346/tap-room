@@ -16,8 +16,21 @@ function KombuchaDetail(props){
   return (
     <React.Fragment>
       <h1>Kombucha Details</h1>
+        <h4>{kombucha.name}</h4>
+        <h4>{kombucha.brand}</h4>
+        <h4>{kombucha.flavor}</h4>
+        <h4>{kombucha.price}</h4>
+        <h4>{kombucha.quantity}</h4>
+        <h5>{amountRemaining}</h5>{reduceQuantity}
     </React.Fragment>
-  )
-
-
+  );
 }
+
+  KombuchaDetail.propTypes = {
+    kombucha: PropTypes.object,
+    onClickingReduce: PropTypes.func
+  };
+
+  export default KombuchaDetail;
+
+
