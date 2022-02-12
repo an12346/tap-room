@@ -1,76 +1,36 @@
+# Kombucha House
 
+## React indepdendent project for Epicodus
 
+## Created By: Anna Pittman
 
-![Tap Room Components](./img/tap-room.png "Tap Room Components")
+## Technologies Used
+* _HTML_
+* _CSS_
+* _Javascript_
+* _React_
+* _npm_
 
+## Description
+This is an independent project, created at Epicodus to show proficiency in React Fundamentals. The application is for a kombucha brewery to list their various kombuchas with names, brands, flavors, prices, and quantities. The user has create and read functionality to each kombucha.
 
-# Getting Started with Create React App
+## Project Layout Diagram
+![Component diagram](./img/tap-room.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Setup/Installation Requirements
+* React version 3.2.0
 
-## Available Scripts
+## Basic Setup
+* Clone the GitHub repository: https://github.com/an12346/tap-room
+* From the main project directory, run npm install in the terminal to load necessary plugins and packages.
+* Run npm install --save-exact react-scripts@3.2.0 to install React version 3.2.0
+* Run npm run start to start the application.
 
-In the project directory, you can run:
+## Known Bugs
+* Unable to view product details page
 
-### `npm start`
+## License
+MIT Copyright (c) 2022 Anna Pittman
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contact Details:
+annaepittman@gmail.com

@@ -5,24 +5,23 @@ import PropTypes from "prop-types";
 function KombuchaMenu(props){
   return (
     <React.Fragment>
-      {props.kombuchaMenu.map((kombucha) =>
+      {props.kombuchaMenu?.map((kombucha) =>
         <Kombucha
           onKombuchaClick = {props.kombuchaSelect}
-          names = {kombucha.names}
+          name = {kombucha.name}
           brand = {kombucha.brand}
           flavor = {kombucha.flavor}
           price = {kombucha.price}
           quantity = {kombucha.quantity}
           id = {kombucha.id}
-          key = {kombucha.id}
-        />
+          key = {kombucha.id}/>
       )}
     </React.Fragment>
   );
 }
 
 KombuchaMenu.propTypes = {
-  kombuchaList: PropTypes.array,
+  kombuchaMenu: PropTypes.array,
   kombuchaSelect: PropTypes.func
 };
 

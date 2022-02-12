@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Kombucha from "./Kombucha";
 
 function KombuchaDetail(props){
   const { kombucha, onClickingReduce } = props;

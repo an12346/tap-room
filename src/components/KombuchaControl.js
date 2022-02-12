@@ -1,6 +1,7 @@
 import React from "react";
 import NewKombuchaForm from "./NewKombuchaForm";
 import KombuchaMenu from "./KombuchaMenu";
+import KombuchaDetail from "./KombuchaDetail";
 
 
 class KombuchaControl extends React.Component {
@@ -44,14 +45,6 @@ class KombuchaControl extends React.Component {
     })
   }
 
-  handleDeletingKombucha = (id) => {
-    const newMainKombuchaMenu = this.state.mainKombuchaMenu.filter(kombucha => kombucha.id !== id);
-    this.setState({
-      mainKombuchaMenu: newMainKombuchaMenu,
-      kombuchaSelect: null
-    });
-  }
-
   handleSelectedKombucha = (id) => {
     const kombuchaSelect = this.state.mainKombuchaMenu.filter(kombucha => kombucha.id === id)[0];
     this.setState({kombuchaSelect: kombuchaSelect})
@@ -60,18 +53,18 @@ class KombuchaControl extends React.Component {
   render(){
     let currentState = null;
     let buttonText = null;
-    if (this.state.kombuchaFormVisibleOnPage) {
+    
+    if (this.state.kombuchaSelect != null) {
+      currentState = <KombuchaDetail kombucha = {this.state.kombuchaSelect}onClickingReduce = {this.handleDecrementKombuchaQuantity}/>
+      buttonText = "Go back to Kombucha Menu";
+    } else if (this.state.kombuchaFormVisibleOnPage) {
       currentState = <NewKombuchaForm onNewKombuchaCreation={this.handleAddingNewKombuchaToMenu} />;
-      buttonText = "Go back to Kombucha Menu"; 
-    } else if (this.state.kombuchaSelect != null) {
-        currentState = 
-        <KombuchaDetail 
-        kombucha = {this.state.kombuchaSelect}
-        onClickingReduce = {this.handleDecrementKombuchaQuantity}/>
-        buttonText = "Go back to Kombucha Menu"
+      buttonText = "Go back to Kombucha Menu";
     } else {
-      currentState = <KombuchaMenu kombuchamenu = {this.state.mainKombuchaMenu} onKombuchaSelect = {this.handleSelectedKombucha} />
+      currentState = <KombuchaMenu kombuchaMenu = {this.state.mainKombuchaMenu} onKombuchaSelect = {this.handleSelectedKombucha} />
+      buttonText = "Add Kombucha";
     }
+    
     return (
       <React.Fragment>
         {currentState}
