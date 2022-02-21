@@ -13,7 +13,6 @@ class KombuchaControl extends React.Component {
       mainKombuchaMenu: [],
       kombuchaSelect: null
     };
-    this.handleClick = this.handleClick.bind(this)
   }
 
   handleClick = () => {
@@ -28,6 +27,7 @@ class KombuchaControl extends React.Component {
       }));
     }
   }
+
     
   handleAddingNewKombuchaToMenu = (newKombucha) => {
     const newMainKombuchaMenu = this.state.mainKombuchaMenu.concat(newKombucha);
@@ -37,13 +37,13 @@ class KombuchaControl extends React.Component {
     });
   }
 
-  handleDecrementKombuchaQuantity = (quantityKombucha) => {
-    const updateKombuchaQuantity = [...this.state.mainKombuchaMenu];
-    updateKombuchaQuantity[quantityKombucha].quantity = updateKombuchaQuantity[quantityKombucha].quantity - 1;
-    this.setState({
-      mainKombuchaMenu: updateKombuchaQuantity
-    })
+  handleKombuchaSell = (id) => {
+  let kombuchaSelect = this.state.mainKombuchaMenu.find(kombucha => kombucha.id !== id);
+    kombuchaSelect.quantity--;
+    const newMainKombuchaMenu = this.state.mainKombuchaMenu.map((kombucha) => {return kombucha.id === id ? kombuchaSelect : kombucha});
+    this.setState({mainKombuchaMenu: newMainKombuchaMenu});
   }
+  
 
   handleSelectedKombucha = (id) => {
     const kombuchaSelect = this.state.mainKombuchaMenu.filter(kombucha => kombucha.id === id)[0];
@@ -55,13 +55,13 @@ class KombuchaControl extends React.Component {
     let buttonText = null;
     
     if (this.state.kombuchaSelect != null) {
-      currentState = <KombuchaDetail kombucha = {this.state.kombuchaSelect}onClickingReduce = {this.handleDecrementKombuchaQuantity}/>
+      currentState = <KombuchaDetail kombucha = {this.state.kombuchaSelect} />
       buttonText = "Go back to Kombucha Menu";
     } else if (this.state.kombuchaFormVisibleOnPage) {
       currentState = <NewKombuchaForm onNewKombuchaCreation={this.handleAddingNewKombuchaToMenu} />;
       buttonText = "Go back to Kombucha Menu";
     } else {
-      currentState = <KombuchaMenu kombuchaMenu = {this.state.mainKombuchaMenu} onKombuchaSelect = {this.handleSelectedKombucha} />
+      currentState = <KombuchaMenu kombuchaMenu = {this.state.mainKombuchaMenu} onKombuchaSelect = {this.handleSelectedKombucha} handleKombuchaSell = {this.handleKombuchaSell}/>
       buttonText = "Add Kombucha";
     }
     
@@ -75,3 +75,4 @@ class KombuchaControl extends React.Component {
 }
 
 export default KombuchaControl;
+

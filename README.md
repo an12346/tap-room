@@ -1,6 +1,6 @@
 # Kombucha House
 
-## React indepdendent project for Epicodus
+## React independent project for Epicodus
 
 ## Created By: Anna Pittman
 
