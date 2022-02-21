@@ -12,7 +12,7 @@
 * _npm_
 
 ## Description
-This is an independent project, created at Epicodus to show proficiency in React Fundamentals. The application is for a kombucha brewery to list their various kombuchas with names, brands, flavors, prices, and quantities. The user has create and read functionality to each kombucha.
+This is an independent project, created at Epicodus to show proficiency in React Fundamentals. The application is for a kombucha brewery to list their various kombuchas with names, brands, flavors, prices, and quantities. The user has create and read functionality for each kombucha.
 
 ## Project Layout Diagram
 ![Component diagram](./img/tap-room.png)
