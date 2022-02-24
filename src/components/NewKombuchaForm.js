@@ -30,7 +30,7 @@ function NewKombuchaForm(props) {
         <input 
           type="number"
           name="quantity"
-          placeholder="Quantity"
+          placeholder="Quantity of pints"
           min='0' />
           <button type="submit">Add Kombucha</button>
       </form>

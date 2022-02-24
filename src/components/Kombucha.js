@@ -3,14 +3,13 @@ import PropTypes from "prop-types";
 
 
 function Kombucha(props){
-  if(props.quantity < 1) {
+  if(props.quantity === 0) {
     return (
       <React.Fragment>
       <div>
         <h2>{props.name} - {props.brand}</h2>
         <h4>{props.flavor}</h4>
         <h4>{props.price}</h4>
-        <h4>{parseInt(props.quantity)}</h4>
         <h4>Sold Out</h4>
       </div>
     </React.Fragment>
@@ -22,9 +21,9 @@ function Kombucha(props){
         <h2>{props.name} - {props.brand}</h2>
         <h4>{props.flavor}</h4>
         <h4>{props.price}</h4>
-        <h4>{parseInt(props.quantity)}</h4>
+        <h4>{props.quantity}</h4>
       </div>
-      <button onClick={()=>props.handleKombuchaSell(props.id)}>Sell Pint</button>
+      <button onClick={()=>props.whenKombuchaSell(props.id)}>Sell Pint</button>
     </React.Fragment>
   )
 }
@@ -39,7 +38,7 @@ Kombucha.propTypes = {
   quantity: PropTypes.number,
   id: PropTypes.string,
   whenKombuchaClicked: PropTypes.func,
-  handleKombuchaSell: PropTypes.func
+  whenKombuchaSell: PropTypes.func
 }
 
 export default Kombucha;
